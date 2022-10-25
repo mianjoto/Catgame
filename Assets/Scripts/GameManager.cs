@@ -5,5 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static KeyCode InteractKey = KeyCode.E;
+    [SerializeField] public GameObject Player;
 
+
+    void Start()
+    {
+    }
 }
