@@ -7,7 +7,7 @@ public class CameraFollowPlayer : MonoBehaviour
 {
     private Transform _playerTransform;
     private float _cameraZPosition;
-    private float _cameraDampeningSpeed = 1f;
+    private float _cameraDampeningSpeed = 2f;
 
     void Start()
     {
@@ -19,6 +19,7 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         Vector3 playerPosition = GetPlayerPosition();
         this.transform.DOMove(playerPosition, _cameraDampeningSpeed);
+        // this.transform.position = playerPosition;
     }
 
     private Vector3 GetPlayerPosition()
