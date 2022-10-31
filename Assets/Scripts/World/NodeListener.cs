@@ -7,35 +7,33 @@ public class NodeListener : MonoBehaviour
 {
     public bool BeginListeningForNodeClick;
     private Camera _mainCamera;
-    private List<GameObject> _nodes;
+    [SerializeField] private LinkedList<GameObject> _currentPath;
     private float _nodeDistanceThreshold = 1.5f;
+    private NodeManager _nodeManager;
+    private LinkedList<GameObject> _emptyLinkedList = new LinkedList<GameObject>();
 
     void Start()
     {
         _mainCamera = Camera.main;
         BeginListeningForNodeClick = true; // TODO change
-        foreach (Transform child in transform)
-        {
-            _nodes.Add(child.gameObject);
-        }
+        _currentPath = _emptyLinkedList;
+        _nodeManager = this.GetComponent<NodeManager>();
     }
 
     void Update()
     {
-        
         if (BeginListeningForNodeClick)
         {
             bool isClickingMouse = Input.GetMouseButton(0);
-            if (!isClickingMouse)
-                return;
-            ListenForNodeClick();
-        }        
+            if (isClickingMouse)
+                ListenForNodeClick();
+        }
     }
 
     private void ListenForNodeClick()
     {
         Vector3 mousePositionInWorld = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        foreach (GameObject node in _nodes)
+        foreach (GameObject node in _nodeManager.Nodes)
         {
             Vector2 nodePosition = node.transform.position;
             float distanceFromNode = Vector2.Distance(nodePosition, mousePositionInWorld);
@@ -43,8 +41,34 @@ public class NodeListener : MonoBehaviour
             if (mouseInRangeOfNode)
             {
                 // TODO highlight node
-                print("In range of " + node.name);
+                if (!_currentPath.Contains(node))
+                {
+                    _currentPath.AddLast(node);
+                }
             }
+        }
+    }
+
+    private void printCurrentPath()
+    {
+        print("in printcurrentpath");
+        var sb = new System.Text.StringBuilder();
+        foreach (GameObject node in _currentPath)
+        {
+            sb.Append(node.name + " -> ");
+        }
+        Debug.Log(sb.ToString());
+    }
+
+    private bool pathIsEmpty()
+    {
+        if (_currentPath == _emptyLinkedList)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
