@@ -3,5 +3,8 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    public List<GameObject> children = new List<GameObject>();
+    [SerializeField] [Tooltip("The direction(s) the decomposer will not raycast from when searching for nearby nodes")]
+    public List<TwoDimensionalDirection> IgnoredDirections;
+    public List<GameObject> NeighboringNodes = new List<GameObject>();
+
 }
