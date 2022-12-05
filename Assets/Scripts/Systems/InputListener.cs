@@ -1,9 +1,10 @@
+using System;
 using UnityEngine;
 
 public class InputListener : MonoBehaviour
 {
     #region Keybinds
-    [Header("Interaction keybinds")]
+    [Header("Interaction Keybinds")]
         [SerializeField]
         public KeyCode LeftClick = KeyCode.Mouse0;
         [SerializeField]
@@ -19,7 +20,7 @@ public class InputListener : MonoBehaviour
         [SerializeField]
         public KeyCode EscapeKey = KeyCode.Escape;
 
-    [Header("Movement keybinds")]
+    [Header("Movement Keybinds")]
         [SerializeField]
         public KeyCode MoveUpKey = KeyCode.W;
         [SerializeField]
@@ -28,5 +29,11 @@ public class InputListener : MonoBehaviour
         public KeyCode MoveDownKey = KeyCode.S;
         [SerializeField]
         public KeyCode MoveLeftKey = KeyCode.A;
+    #endregion
+
+    #region Events
+    [Header("Input Events")]
+
+
     #endregion
 }
