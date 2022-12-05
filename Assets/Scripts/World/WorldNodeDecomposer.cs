@@ -24,7 +24,7 @@ public class WorldNodeDecomposer : MonoBehaviour
         foreach (GameObject node in nodeList)
         {
             List<GameObject> children = new List<GameObject>();
-            node.layer = LayerMask.NameToLayer("Default");
+
             // Cast a line in cardinal directions
             Vector2 up = new Vector2(node.transform.position.x, node.transform.position.y + raycastLength);
             Vector2 down = new Vector2(node.transform.position.x, node.transform.position.y - raycastLength);
@@ -36,32 +36,21 @@ public class WorldNodeDecomposer : MonoBehaviour
             RaycastHit2D rightHit = Physics2D.Linecast(node.transform.position, right, nodeLayerMask);
             RaycastHit2D leftHit = Physics2D.Linecast(node.transform.position, left, nodeLayerMask);
 
-            print("");
-            print("");
-            print("");
-            print("Up hits=" + upHit.collider);
-            print("Down hits=" + downHit.collider);
-            print("Right hits=" + rightHit.collider);
-            print("Left hits=" + leftHit.collider);
             if (upHit.collider != null && upHit.collider.name != node.name)
             {
                 children.Add(upHit.collider.gameObject);
-                print(node.name + " found " + upHit.collider.name + " as a child");
             }
             if (downHit.collider != null && downHit.collider.name != node.name)
             {
                 children.Add(downHit.collider.gameObject);
-                print(node.name + " found " + downHit.collider.name + " as a child");
             }
             if (rightHit.collider != null && rightHit.collider.name != node.name)
             {
                 children.Add(rightHit.collider.gameObject);
-                print(node.name + " found " + rightHit.collider.name + " as a child");
             }
             if (leftHit.collider != null && leftHit.collider.name != node.name)
             {
                 children.Add(leftHit.collider.gameObject);
-                print(node.name + " found " + leftHit.collider.name + " as a child");
             }
             
             node.GetComponent<Node>().children = children;
