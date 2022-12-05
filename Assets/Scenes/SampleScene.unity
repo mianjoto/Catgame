@@ -5124,6 +5124,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 363229602}
     m_Modifications:
+    - target: {fileID: 6820330134790558770, guid: e46d79df8b43cdd489f9c12e82500c01, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6820330135254268641, guid: e46d79df8b43cdd489f9c12e82500c01, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5183,6 +5187,10 @@ PrefabInstance:
     - target: {fileID: 6820330135254268647, guid: e46d79df8b43cdd489f9c12e82500c01, type: 3}
       propertyPath: m_Name
       value: Main House
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820330135254268647, guid: e46d79df8b43cdd489f9c12e82500c01, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e46d79df8b43cdd489f9c12e82500c01, type: 3}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NodeManager : MonoBehaviour
+public class WorldNodeDecomposer : MonoBehaviour
 {
     public List<GameObject> Nodes = new List<GameObject>();
     [SerializeField] private LayerMask nodeLayerMask;

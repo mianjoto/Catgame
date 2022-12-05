@@ -9,7 +9,7 @@ public class NodeListener : MonoBehaviour
     private Camera _mainCamera;
     [SerializeField] private LinkedList<GameObject> _currentPath;
     private float _nodeDistanceThreshold = 1.5f;
-    private NodeManager _nodeManager;
+    private WorldNodeDecomposer _nodeManager;
     private LinkedList<GameObject> _emptyLinkedList = new LinkedList<GameObject>();
 
     void Start()
@@ -17,7 +17,7 @@ public class NodeListener : MonoBehaviour
         _mainCamera = Camera.main;
         BeginListeningForNodeClick = true; // TODO change
         _currentPath = _emptyLinkedList;
-        _nodeManager = this.GetComponent<NodeManager>();
+        _nodeManager = this.GetComponent<WorldNodeDecomposer>();
     }
 
     void Update()
