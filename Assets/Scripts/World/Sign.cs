@@ -6,14 +6,19 @@ public class Sign : Interactable
 {
     [SerializeField] private string _signMessage;
 
-    void Update()
+    void OnEnable()
     {
-        Interact();
+        InputListener.OnInteractKeyDown += Interact;
+    }
+
+    void OnDisable()
+    {
+        InputListener.OnInteractKeyDown -= Interact;
     }
 
     public override void Interact()
     {
-        if (Input.GetKeyDown(GameManager.InteractKey) && CanInteract)
+        if (CanInteract)
         {
             print(_signMessage);
             // TODO: Add sign message

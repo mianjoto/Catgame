@@ -8,14 +8,19 @@ public class Door : Interactable
     [SerializeField]
     private SceneSwitchData _sceneSwitchData;
 
-    void Update()
+    void OnEnable()
     {
-        Interact();
+        InputListener.OnInteractKeyDown += Interact;
+    }
+
+    void OnDisable()
+    {
+        InputListener.OnInteractKeyDown -= Interact;
     }
 
     public override void Interact()
     {
-        if (Input.GetKeyDown(GameManager.InteractKey) && CanInteract)
+        if (CanInteract)
         {
             SceneLoader.Load(_sceneSwitchData.TargetScene, _sceneSwitchData.SceneEntranceName);
         }
