@@ -740,7 +740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1642257380
 Animator:
   serializedVersion: 4
@@ -914,6 +914,7 @@ GameObject:
   - component: {fileID: 1857502603}
   - component: {fileID: 1857502605}
   - component: {fileID: 1857502604}
+  - component: {fileID: 1857502606}
   m_Layer: 5
   m_Name: HappinessBarInner
   m_TagString: Untagged
@@ -979,6 +980,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857502602}
   m_CullTransparentMesh: 1
+--- !u!114 &1857502606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857502602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a1e2c8ed765e740a615fe8b3d7562f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2029771784
 PrefabInstance:
   m_ObjectHideFlags: 0
