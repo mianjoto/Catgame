@@ -28,5 +28,6 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
         DontDestroyOnLoad(PlayerManager.Player);
+        DontDestroyOnLoad(InputListener.Instance);
     }
 }

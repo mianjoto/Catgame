@@ -42,6 +42,10 @@ public class InputListener : MonoBehaviour
         public static Action OnMoveLeftKeyUp;
     #endregion
 
+    #region SINGLETON
+        private static InputListener _instance;
+        public static InputListener Instance { get { return _instance; } }
+    #endregion
 
     private static void ListenForKeyDown(KeyCode key, Action onKeyDownEvent)
     {
@@ -65,6 +69,16 @@ public class InputListener : MonoBehaviour
             onMouseUpEvent?.Invoke();
     }
 
+    void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+        }
+    }
+    
     private void Update()
     {
         ListenForUserInteractionKeys();
