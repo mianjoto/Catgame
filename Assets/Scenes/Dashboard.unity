@@ -427,6 +427,9 @@ GameObject:
   - component: {fileID: 1642257380}
   - component: {fileID: 1642257383}
   - component: {fileID: 1642257384}
+  - component: {fileID: 1642257385}
+  - component: {fileID: 1642257386}
+  - component: {fileID: 1642257387}
   m_Layer: 0
   m_Name: Baby
   m_TagString: Player
@@ -548,3 +551,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b57808399bdecf4a8511c09b2ef5de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsMoving: 0
+--- !u!114 &1642257385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642257379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676462386746a8b44a7eec18add53dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1642257386
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642257379}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1642257387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642257379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf834ec67d3f9d34789faf969ef87b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isFacingLeft: 1
