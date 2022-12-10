@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
         // Handle PlayerManager instance
         if (_managerInstance != null && _managerInstance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(this);
         } else {
             _managerInstance = this;
         }
@@ -39,6 +39,7 @@ public class PlayerManager : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             _playerInstance = this.gameObject;
+            DontDestroyOnLoad(this.gameObject);
         }
     }
 

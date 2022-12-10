@@ -76,6 +76,7 @@ public class InputListener : MonoBehaviour
             Destroy(this.gameObject);
         } else {
             _instance = this;
+            DontDestroyOnLoad(this);
         }
     }
     

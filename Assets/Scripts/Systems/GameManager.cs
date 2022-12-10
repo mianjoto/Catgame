@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         HandleSingleton();
-        HandleDontDestroys();
     }
 
     void HandleSingleton()
@@ -20,14 +19,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         } else {
+            DontDestroyOnLoad(this);
             _instance = this;
         }
     }
 
-    private void HandleDontDestroys()
-    {
-        DontDestroyOnLoad(this);
-        DontDestroyOnLoad(PlayerManager.Player);
-        DontDestroyOnLoad(InputListener.Instance);
-    }
 }
