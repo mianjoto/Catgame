@@ -10,6 +10,8 @@ public class CatMovement : MonoBehaviour
     private Vector2 _previousPosition;
     public static Action<Vector3, Vector3> OnCatMove;
     public bool IsMoving;
+    [SerializeField]
+    private BoxCollider2D _pathableArea;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,24 @@ public class CatMovement : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void MoveCatToRandomPointInPathableArea(float duration = 3f)
+    {
+        Vector3 randomPointInPathableArea = GetRandomPointInPathableArea();
+        MoveCat(randomPointInPathableArea, duration);
+    }
+
+    private Vector3 GetRandomPointInPathableArea()
+    {
+        Vector3 extents = _pathableArea.size / 2f;
+        Vector3 point = new Vector3(
+            UnityEngine.Random.Range( -extents.x, extents.x ),
+            UnityEngine.Random.Range( -extents.y, extents.y ),
+            UnityEngine.Random.Range( -extents.z, extents.z )
+        );
+    
+        return _pathableArea.transform.TransformPoint( point );
     }
 
     public void MoveCat(Vector2 newPosition, float duration = 3f)

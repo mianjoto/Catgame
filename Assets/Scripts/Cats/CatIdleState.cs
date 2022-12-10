@@ -7,7 +7,6 @@ public class CatIdleState : CatBaseState
     private Animator _catAnimator;
     private CatMovement _catMovementController;
     private Animation _idleAnimation;
-    // Add cat walk function here
     private Animation _faceAwayAnimation;
     private Animation _sleepAnimation;
     private bool hasWalked;
@@ -58,12 +57,11 @@ public class CatIdleState : CatBaseState
         if (hasWalked)
             return;
 
-        float distanceScalar = 3f;
-        Vector2 randomPosition = UnityEngine.Random.insideUnitCircle * distanceScalar;
-        _catMovementController.MoveCat(randomPosition, 5f);
+        _catMovementController.MoveCatToRandomPointInPathableArea(duration: 4f);
         hasWalked = true;
     }
 
+    
     private void RunFaceAway()
     {
     }
@@ -79,7 +77,6 @@ public class CatIdleState : CatBaseState
         return (CatIdleActions) actions.GetValue(randomActionIndex);
     }
 
-    
 }
 
 public enum CatIdleActions
