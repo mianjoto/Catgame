@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class CatAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animator _animator;
+    private CatMovement _catMovementHandler;
+
     void Start()
     {
-        
+        _animator = GetComponent<Animator>();
+        _catMovementHandler = GetComponent<CatMovement>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        UpdateAnimations();
     }
+
+    private void UpdateAnimations()
+    {
+        UpdateCatIsMoving();
+    }
+
+    void UpdateCatIsMoving()
+    {
+        bool isCatCurrentlyMoving = _catMovementHandler.IsMoving;
+        _animator.SetBool("isCatMoving", isCatCurrentlyMoving);
+    }
+
 }
