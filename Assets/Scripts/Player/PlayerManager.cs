@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public PlayerController PlayerController;
+    public PlayerMovement PlayerController;
     public PlayerAnimator PlayerAnimator;
 
     void Start()
     {
-        PlayerController = this.GetComponent<PlayerController>();
+        PlayerController = this.GetComponent<PlayerMovement>();
         PlayerAnimator = this.GetComponent<PlayerAnimator>();
     }
 

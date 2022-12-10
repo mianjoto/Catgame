@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] private PlayerController _controller;
+    [SerializeField] private PlayerMovement _controller;
     [SerializeField] private Animator _animator;
     
     private string _horizontalMovementFloat = "horizontalMovement";

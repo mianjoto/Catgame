@@ -7,7 +7,7 @@ public enum PlayerStates {
     Walking
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public PlayerStates CurrentPlayerState { get; set; }
     [HideInInspector] public Vector2 Movement;
