@@ -15,6 +15,10 @@ public class PlayerManager : MonoBehaviour
         public PlayerMovement PlayerMovement;
         public PlayerAnimator PlayerAnimator;
     #endregion
+    
+    #region MANAGEMENT
+        public static bool MovementIsDisabled;
+    #endregion
 
     void Awake()
     {
@@ -43,6 +47,11 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        MovementIsDisabled = false;
+    }
+
     void Update()
     {
         PlayerAnimator.AnimateCharacter();     
@@ -50,6 +59,9 @@ public class PlayerManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (MovementIsDisabled)
+            return;
+
         PlayerMovement.MoveCharacter();      
     }
 }

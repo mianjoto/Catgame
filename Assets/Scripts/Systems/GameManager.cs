@@ -24,4 +24,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static void DisablePlayerMovement() => PlayerManager.MovementIsDisabled = true;
+    public static void EnablePlayerMovement() => PlayerManager.MovementIsDisabled = true;
+
 }
