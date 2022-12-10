@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : Interactable
+public class SwitchSceneOnInteract : Interactable
 {   
     [Tooltip("Scriptable Object that holds the information of which scene to switch to and where to spawn")]
     [SerializeField]
