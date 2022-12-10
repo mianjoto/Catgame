@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         HandleSingleton();
-        HandleDontDestorys();
+        HandleDontDestroys();
     }
 
     void HandleSingleton()
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void HandleDontDestorys()
+    private void HandleDontDestroys()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
 
