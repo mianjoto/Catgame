@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _playerAnimator = PlayerManager.Instance.PlayerAnimator;
+        _playerAnimator = PlayerManager.Manager.PlayerAnimator;
     }
 
     public void MoveCharacter() {

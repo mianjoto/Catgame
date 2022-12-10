@@ -22,7 +22,7 @@ public class PlayerAnimator : MonoBehaviour
 
     void Start()
     {
-        _playerMovement = PlayerManager.Instance.PlayerMovement;
+        _playerMovement = PlayerManager.Manager.PlayerMovement;
     }
 
     public void AnimateCharacter ()

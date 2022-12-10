@@ -8,8 +8,7 @@ public class EnterSceneAtScenePoint : MonoBehaviour
     {
         if (PlayerPrefs.GetString(SceneLoader.NEXT_SCENE_ENTER_POINT_KEY) == this.gameObject.name)
         {
-            print($"GOING TO TP TO {this.gameObject.name}'s position");
-            GameManager.Player.transform.position = this.transform.position;
+            PlayerManager.Player.transform.position = this.transform.position;
         }        
     }
 }

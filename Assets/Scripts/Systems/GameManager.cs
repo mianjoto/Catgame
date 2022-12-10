@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
     #region SINGLETONS
         private static GameManager _instance;
         public static GameManager Instance { get { return _instance; } }
-        [SerializeField] public static GameObject Player;
     #endregion
 
     private void Awake()
@@ -27,9 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleDontDestroys()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-
         DontDestroyOnLoad(this);
-        DontDestroyOnLoad(Player);
+        DontDestroyOnLoad(PlayerManager.Player);
     }
 }
