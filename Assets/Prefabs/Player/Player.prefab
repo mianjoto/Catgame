@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8cf0f3d00d0fbe45bfb9c2d502e74f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerMovement: {fileID: 0}
+  PlayerMovement: {fileID: 7572678438510082857}
   PlayerAnimator: {fileID: 7572678438510082861}
 --- !u!114 &7572678438510082857
 MonoBehaviour:
