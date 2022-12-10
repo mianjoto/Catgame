@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6820330134790558765}
   - component: {fileID: 6820330134790558767}
   - component: {fileID: 6820330134790558764}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37170f98b4b6f6b4285de548b6df042c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanInteract: 0
+  _indoorTargetScene: 3
 --- !u!61 &6820330134790558764
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84,7 +86,7 @@ GameObject:
   - component: {fileID: 6820330135254268640}
   - component: {fileID: 6820330135254268642}
   - component: {fileID: 6820330135254268643}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Main House
   m_TagString: Fadeable
   m_Icon: {fileID: 0}

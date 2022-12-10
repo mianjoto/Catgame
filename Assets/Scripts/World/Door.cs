@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Door : Interactable
 {
+    [SerializeField]
+    [Header("Scene that the player should switch to upon trigger")]
+    private SceneLoader.Scenes _indoorTargetScene;
+
     void Update()
     {
         Interact();
@@ -13,8 +17,7 @@ public class Door : Interactable
     {
         if (Input.GetKeyDown(GameManager.InteractKey) && CanInteract)
         {
-            print("Entered scene in " + this.gameObject.name);
-            // TODO: Add scene switching
+            SceneLoader.Load(_indoorTargetScene);
         }
     }
 }
