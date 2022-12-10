@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement _controller;
+    [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private Animator _animator;
     
     private string _horizontalMovementFloat = "horizontalMovement";
@@ -13,16 +13,16 @@ public class PlayerAnimator : MonoBehaviour
 
     void Start()
     {
-        _controller = this.GetComponent<PlayerManager>().PlayerController;
+        _playerMovement = PlayerManager.Instance.PlayerMovement;
     }
 
     public void AnimateCharacter ()
     {
-        PlayerStates currentState = _controller.CurrentPlayerState;
+        PlayerStates currentState = _playerMovement.CurrentPlayerState;
     
-        _animator.SetFloat(_horizontalMovementFloat, _controller.Movement.x);
-        _animator.SetFloat(_verticalMovementFloat, _controller.Movement.y);
-        _animator.SetFloat(_speedFloat, _controller.Movement.sqrMagnitude);
+        _animator.SetFloat(_horizontalMovementFloat, _playerMovement.Movement.x);
+        _animator.SetFloat(_verticalMovementFloat, _playerMovement.Movement.y);
+        _animator.SetFloat(_speedFloat, _playerMovement.Movement.sqrMagnitude);
         
     }
 }
