@@ -8,8 +8,13 @@ public class SceneLoader : MonoBehaviour
     public static string NEXT_SCENE_ENTER_POINT_KEY = "NextSceneEnterPoint";
     private static Action OnLoaderCallback;
 
-    public static void Load(SceneLoader.Scenes scene, string targetSceneEnterPointName)
+    public static void Load(SceneLoader.Scenes scene, string targetSceneEnterPointName, bool disablePlayerMovement = false)
     {
+        if (disablePlayerMovement)
+            GameManager.DisablePlayerMovement();
+        else
+            GameManager.EnablePlayerMovement();
+        
         PlayerPrefs.SetString(NEXT_SCENE_ENTER_POINT_KEY, targetSceneEnterPointName);
         
         // Load the target scene after the callback
@@ -21,6 +26,7 @@ public class SceneLoader : MonoBehaviour
         // Load the loading scene
         SceneManager.LoadScene(Scenes.Loading.ToString());
     }
+
 
     public static void LoaderCallback() {
         if (OnLoaderCallback != null)

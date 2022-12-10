@@ -7,6 +7,8 @@ public class SwitchSceneOnInteract : Interactable
     [Tooltip("Scriptable Object that holds the information of which scene to switch to and where to spawn")]
     [SerializeField]
     private SceneSwitchData _sceneSwitchData;
+    [SerializeField]
+    private bool _disablePlayerMovement;
 
     void OnEnable()
     {
@@ -22,7 +24,7 @@ public class SwitchSceneOnInteract : Interactable
     {
         if (CanInteract)
         {
-            SceneLoader.Load(_sceneSwitchData.TargetScene, _sceneSwitchData.SceneEntranceName);
+            SceneLoader.Load(_sceneSwitchData.TargetScene, _sceneSwitchData.SceneEntranceName, _disablePlayerMovement);
         }
     }
 }
