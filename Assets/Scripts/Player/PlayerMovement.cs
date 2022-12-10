@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerStates {
-    Idling,
-    Walking
-}
-
+[RequireComponent(typeof(PlayerAnimator))]
 public class PlayerMovement : MonoBehaviour
 {
-    public PlayerStates CurrentPlayerState { get; set; }
-    [HideInInspector] public Vector2 Movement;
+    [HideInInspector]
+    public Vector2 Movement;
 
-    private Rigidbody2D _rb;
-    private Transform _trans;
+    #region COMPONENTS
+        private PlayerAnimator _playerAnimator;
+        private Rigidbody2D _rb;
+        private Transform _trans;
+    #endregion
     [SerializeField] private float _walkSpeed = 2f;
 
     void Start()
     {
-        _rb = this.gameObject.GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
+        _playerAnimator = PlayerManager.Instance.PlayerAnimator;
     }
 
     public void MoveCharacter() {
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Movement.sqrMagnitude == 0)
         {
-            CurrentPlayerState = PlayerStates.Idling;
+            _playerAnimator.SetPlayerState(PlayerStates.Idling);
             return;
         }
 
@@ -53,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
             _rb.transform.Translate(Vector2.up * _walkSpeed * Time.deltaTime, Space.World);
         }
 
-        CurrentPlayerState = PlayerStates.Walking;
+        _playerAnimator.SetPlayerState(PlayerStates.Walking);
     }
+}
+
+public enum PlayerStates {
+    Idling,
+    Walking
 }

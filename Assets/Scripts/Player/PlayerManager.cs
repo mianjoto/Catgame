@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
         public static PlayerManager Instance { get { return _instance; } }
     #endregion
 
-    #region PLAYER SCRIPTS
+    #region PLAYER COMPONENTS
         public PlayerMovement PlayerMovement;
         public PlayerAnimator PlayerAnimator;
     #endregion
@@ -22,10 +22,6 @@ public class PlayerManager : MonoBehaviour
         } else {
             _instance = this;
         }
-    }
-
-    void Start()
-    {
         PlayerMovement = this.GetComponent<PlayerMovement>();
         PlayerAnimator = this.GetComponent<PlayerAnimator>();
     }

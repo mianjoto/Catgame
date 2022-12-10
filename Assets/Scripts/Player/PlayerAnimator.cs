@@ -2,14 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerMovement))]
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement _playerMovement;
-    [SerializeField] private Animator _animator;
-    
-    private string _horizontalMovementFloat = "horizontalMovement";
-    private string _verticalMovementFloat = "verticalMovement";
-    private string _speedFloat = "speed";
+    [HideInInspector]
+    public PlayerStates CurrentPlayerState { get; set; }
+
+    #region COMPONENTS
+        [SerializeField]
+        private Animator _animator;
+        private PlayerMovement _playerMovement;
+    #endregion
+
+    #region KEYS
+        private const string HORIZONTAL_MOVEMENT_FLOAT_KEY = "horizontalMovement";
+        private const string VERTICAL_MOVEMENT_FLOAT_KEY = "verticalMovement";
+        private const string SPEED_FLOAT_KEY = "speed";
+    #endregion
 
     void Start()
     {
@@ -18,11 +27,13 @@ public class PlayerAnimator : MonoBehaviour
 
     public void AnimateCharacter ()
     {
-        PlayerStates currentState = _playerMovement.CurrentPlayerState;
-    
-        _animator.SetFloat(_horizontalMovementFloat, _playerMovement.Movement.x);
-        _animator.SetFloat(_verticalMovementFloat, _playerMovement.Movement.y);
-        _animator.SetFloat(_speedFloat, _playerMovement.Movement.sqrMagnitude);
-        
+        _animator.SetFloat(HORIZONTAL_MOVEMENT_FLOAT_KEY, _playerMovement.Movement.x);
+        _animator.SetFloat(VERTICAL_MOVEMENT_FLOAT_KEY, _playerMovement.Movement.y);
+        _animator.SetFloat(SPEED_FLOAT_KEY, _playerMovement.Movement.sqrMagnitude);
+    }
+
+    public void SetPlayerState(PlayerStates newState)
+    {
+        CurrentPlayerState = newState;
     }
 }
