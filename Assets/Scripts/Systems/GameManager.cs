@@ -1,12 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static KeyCode InteractKey = KeyCode.E;
-    [SerializeField] public GameObject Player;
+    [SerializeField] public static GameObject Player;
 
+    void Awake()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+
+        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(Player);
+    }
 
     void Start()
     {

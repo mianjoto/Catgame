@@ -5,18 +5,13 @@ using System;
 
 public class SceneLoader : MonoBehaviour
 {
-    public enum Scenes
-    {
-        Loading,
-        Town,
-        Dashboard,
-        House
-    }
-
+    public static string NEXT_SCENE_ENTER_POINT_KEY = "NextSceneEnterPoint";
     private static Action OnLoaderCallback;
 
-    public static void Load(SceneLoader.Scenes scene)
-    {   
+    public static void Load(SceneLoader.Scenes scene, string targetSceneEnterPointName)
+    {
+        PlayerPrefs.SetString(NEXT_SCENE_ENTER_POINT_KEY, targetSceneEnterPointName);
+        
         // Load the target scene after the callback
         OnLoaderCallback = () =>
         {
@@ -34,5 +29,13 @@ public class SceneLoader : MonoBehaviour
             OnLoaderCallback = null;
         }
     }
+    public enum Scenes
+    {
+        Loading,
+        Town,
+        Dashboard,
+        House
+    }
+
 }
 

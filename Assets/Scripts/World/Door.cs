@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : Interactable
-{
+{   
+    [Tooltip("Scriptable Object that holds the information of which scene to switch to and where to spawn")]
     [SerializeField]
-    [Header("Scene that the player should switch to upon trigger")]
-    private SceneLoader.Scenes _indoorTargetScene;
+    private SceneSwitchData _sceneSwitchData;
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class Door : Interactable
     {
         if (Input.GetKeyDown(GameManager.InteractKey) && CanInteract)
         {
-            SceneLoader.Load(_indoorTargetScene);
+            SceneLoader.Load(_sceneSwitchData.TargetScene, _sceneSwitchData.SceneEntranceName);
         }
     }
 }
