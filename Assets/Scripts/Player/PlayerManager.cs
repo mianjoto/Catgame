@@ -15,7 +15,11 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        PlayerController.MoveCharacter();      
         PlayerAnimator.AnimateCharacter();     
+    }
+
+    void FixedUpdate()
+    {
+        PlayerController.MoveCharacter();      
     }
 }
