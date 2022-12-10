@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public PlayerMovement PlayerController;
+    public PlayerMovement PlayerMovement;
     public PlayerAnimator PlayerAnimator;
 
     void Start()
     {
-        PlayerController = this.GetComponent<PlayerMovement>();
+        PlayerMovement = this.GetComponent<PlayerMovement>();
         PlayerAnimator = this.GetComponent<PlayerAnimator>();
     }
 
@@ -20,6 +20,6 @@ public class PlayerManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        PlayerController.MoveCharacter();      
+        PlayerMovement.MoveCharacter();      
     }
 }
