@@ -30,6 +30,21 @@ public abstract class StatusBar : MonoBehaviour
         
     }
 
+    void OnEnable()
+    {
+        InputListener.OnAlternateInteractKeyDown += DEBUG_ReduceBarAmount;
+    }
+    void OnDisble()
+    {
+        InputListener.OnAlternateInteractKeyDown -= DEBUG_ReduceBarAmount;
+    }
+    
+    void DEBUG_ReduceBarAmount()
+    {
+        _currentFillAmount -= 20;
+        UpdateStatusBar(_currentFillAmount);
+    }
+
     IEnumerator DecayStatus()
     {
         while (_currentFillAmount > 0)

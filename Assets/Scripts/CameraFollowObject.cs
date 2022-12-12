@@ -25,4 +25,6 @@ public class CameraFollowObject : MonoBehaviour
         objectPostition = new Vector3(objectPostition.x, objectPostition.y, _cameraZPosition);
         return objectPostition;
     }
+
+    
 }

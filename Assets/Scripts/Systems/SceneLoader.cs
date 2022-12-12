@@ -35,12 +35,21 @@ public class SceneLoader : MonoBehaviour
             OnLoaderCallback = null;
         }
     }
+
+    // Temporary--only for testing
+    public static void LoadMainMenu()
+    {
+        Load(Scenes.MainMenu, "MainMenuEnterPoint", true);
+    }
+
     public enum Scenes
     {
         Loading,
         Town,
         Dashboard,
-        House
+        House,
+        MainMenu,
+        GameOver
     }
 
 }

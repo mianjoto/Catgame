@@ -1090,6 +1090,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7769882224211557809, guid: ec52e8125a7a2014cb08c8b8b2510fb8, type: 3}
+      propertyPath: _gameOverSwitchSceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: b2fd860b3769750449684bb0868f1e04, type: 2}
     - target: {fileID: 7769882224211557815, guid: ec52e8125a7a2014cb08c8b8b2510fb8, type: 3}
       propertyPath: m_Name
       value: GameManager

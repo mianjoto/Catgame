@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
         public static GameManager Instance { get { return _instance; } }
     #endregion
 
+    #region DATA
+        [SerializeField]
+        private SceneSwitchData _gameOverSwitchSceneData;       
+    #endregion
+
     private void Awake()
     {
         HandleSingleton();
@@ -22,6 +27,20 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this);
             _instance = this;
         }
+    }
+
+    void OnEnable()
+    {
+        StatusBar.OnStatusBarEmpty += GameOver;
+    }
+    void OnDisable()
+    {
+        StatusBar.OnStatusBarEmpty += GameOver;
+    }
+
+    private void GameOver(StatusBar obj)
+    {
+        SceneLoader.Load(SceneLoader.Scenes.GameOver, "GameOverEntrancePOint", true);
     }
 
     public static void DisablePlayerMovement() => PlayerManager.MovementIsDisabled = true;
