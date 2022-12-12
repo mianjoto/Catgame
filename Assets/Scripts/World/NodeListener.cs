@@ -7,7 +7,9 @@ public class NodeListener : MonoBehaviour
 {
     public bool BeginListeningForNodeClick;
     private Camera _mainCamera;
-    [SerializeField] private LinkedList<GameObject> _currentPath;
+    [SerializeField]
+    public LinkedList<GameObject> Path;
+    public static Action<LinkedList<GameObject>> OnAddNodeToPath;
     private float _nodeDistanceThreshold = 1.5f;
     private WorldNodeDecomposer _nodeManager;
     private LinkedList<GameObject> _emptyLinkedList = new LinkedList<GameObject>();
@@ -15,22 +17,36 @@ public class NodeListener : MonoBehaviour
     void Start()
     {
         _mainCamera = Camera.main;
-        BeginListeningForNodeClick = true; // TODO change
-        _currentPath = _emptyLinkedList;
+        BeginListeningForNodeClick = false;
+        Path = _emptyLinkedList;
         _nodeManager = this.GetComponent<WorldNodeDecomposer>();
     }
 
     void Update()
     {
-        if (BeginListeningForNodeClick)
+        // print(Input.GetMouseButton(0));
+        if (Input.GetMouseButton(0))
         {
-            bool isClickingMouse = Input.GetMouseButton(0);
-            if (isClickingMouse)
-                ListenForNodeClick();
+            ListenAndDrawNodePath();
+        }
+        else if (Path.Count != 0)
+        {
+            Path.Clear();
         }
     }
 
-    private void ListenForNodeClick()
+    private void ListenAndDrawNodePath()
+    {
+        GameObject node = ListenForNodeClick();
+        if (!Path.Contains(node) && node != null)
+        {
+            print("got " + node.name);
+            Path.AddLast(node);
+            OnAddNodeToPath?.Invoke(Path);
+        }
+    }
+
+    private GameObject ListenForNodeClick()
     {
         Vector3 mousePositionInWorld = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
         foreach (GameObject node in _nodeManager.Nodes)
@@ -40,20 +56,17 @@ public class NodeListener : MonoBehaviour
             bool mouseInRangeOfNode = distanceFromNode < _nodeDistanceThreshold;
             if (mouseInRangeOfNode)
             {
-                // TODO highlight node
-                if (!_currentPath.Contains(node))
-                {
-                    _currentPath.AddLast(node);
-                }
+                return node;
             }
         }
+        return null;
     }
 
     private void printCurrentPath()
     {
         print("in printcurrentpath");
         var sb = new System.Text.StringBuilder();
-        foreach (GameObject node in _currentPath)
+        foreach (GameObject node in Path)
         {
             sb.Append(node.name + " -> ");
         }
@@ -62,7 +75,7 @@ public class NodeListener : MonoBehaviour
 
     private bool pathIsEmpty()
     {
-        if (_currentPath == _emptyLinkedList)
+        if (Path == _emptyLinkedList)
         {
             return true;
         }

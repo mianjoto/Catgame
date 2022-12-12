@@ -19,6 +19,7 @@ public class InputListener : MonoBehaviour
 
     #region Events
     [Header("Input Interaction Events")]
+        public static Action OnLeftClick;
         public static Action OnLeftClickDown;
         public static Action OnLeftClickUp;
         public static Action OnRightClickDown;
@@ -61,6 +62,11 @@ public class InputListener : MonoBehaviour
             onKeyUpEvent?.Invoke();
     }
 
+    private static void ListenForMouse(int mouseKey, Action onMouse)
+    {
+        if (Input.GetMouseButton(mouseKey))
+            onMouse?.Invoke();
+    }
     private static void ListenForMouseUpAndDown(int mouseKey, Action onMouseDownEvent, Action onMouseUpEvent)
     {
         if (Input.GetMouseButtonDown(mouseKey))
@@ -97,6 +103,7 @@ public class InputListener : MonoBehaviour
 
     private void ListenForClicks()
     {
+        ListenForMouse(mouseKey: 0, OnLeftClick);
         ListenForMouseUpAndDown(mouseKey: 0, OnLeftClickDown, OnLeftClickUp);
         ListenForMouseUpAndDown(mouseKey: 1, OnRightClickDown, OnRightClickUp);
         ListenForMouseUpAndDown(mouseKey: 2, OnMiddleMouseClickDown, OnMiddleMouseClickUp);
