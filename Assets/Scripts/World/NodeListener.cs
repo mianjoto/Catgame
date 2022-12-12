@@ -5,20 +5,17 @@ using UnityEngine;
 
 public class NodeListener : MonoBehaviour
 {
-    public bool BeginListeningForNodeClick;
     private Camera _mainCamera;
     [SerializeField]
     public LinkedList<GameObject> Path;
     public static Action<LinkedList<GameObject>> OnAddNodeToPath;
     private float _nodeDistanceThreshold = 1.5f;
     private WorldNodeDecomposer _nodeManager;
-    private LinkedList<GameObject> _emptyLinkedList = new LinkedList<GameObject>();
 
     void Start()
     {
         _mainCamera = Camera.main;
-        BeginListeningForNodeClick = false;
-        Path = _emptyLinkedList;
+        Path = new LinkedList<GameObject>();
         _nodeManager = this.GetComponent<WorldNodeDecomposer>();
     }
 
@@ -37,7 +34,7 @@ public class NodeListener : MonoBehaviour
 
     private void ListenAndDrawNodePath()
     {
-        GameObject node = ListenForNodeClick();
+        GameObject node = GetNodeAtMousePosition();
         if (!Path.Contains(node) && node != null)
         {
             print("got " + node.name);
@@ -46,7 +43,7 @@ public class NodeListener : MonoBehaviour
         }
     }
 
-    private GameObject ListenForNodeClick()
+    public GameObject GetNodeAtMousePosition()
     {
         Vector3 mousePositionInWorld = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
         foreach (GameObject node in _nodeManager.Nodes)
@@ -75,7 +72,7 @@ public class NodeListener : MonoBehaviour
 
     private bool pathIsEmpty()
     {
-        if (Path == _emptyLinkedList)
+        if (Path.Count == 0)
         {
             return true;
         }
@@ -85,11 +82,4 @@ public class NodeListener : MonoBehaviour
         }
     }
 
-    // void OnDrawGizmos()
-    // {
-    //     foreach(Transform nodeTransform in _nodesTransform)
-    //     {
-    //         Gizmos.DrawWireSphere(nodeTransform.position, _nodeDistanceThreshold);
-    //     }
-    // }
 }

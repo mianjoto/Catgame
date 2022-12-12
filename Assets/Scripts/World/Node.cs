@@ -7,4 +7,8 @@ public class Node : MonoBehaviour
     public List<TwoDimensionalDirection> IgnoredDirections;
     public List<GameObject> NeighboringNodes = new List<GameObject>();
 
+    public float g;
+    public float f;
+    public float h;
+    public Node PathParent;
 }

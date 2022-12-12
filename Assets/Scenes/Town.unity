@@ -243,6 +243,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &76147301
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +310,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &77762945
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +361,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 0200000000000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &77762948
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -432,6 +444,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1001 &109877849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,6 +581,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &144996736
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +648,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &153529465
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +715,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &176166791
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +782,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &185086087
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +849,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &187340944
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +900,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &187340947
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -943,6 +983,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &246966169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1050,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &311668200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &337189187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1184,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &340196081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 03000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &340196084
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3120,6 +3180,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &461865309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,6 +3231,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &461865312
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3230,6 +3298,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 00000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &463298600
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3309,6 +3381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!4 &486073110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6820330135254268641, guid: e46d79df8b43cdd489f9c12e82500c01, type: 3}
@@ -3529,6 +3605,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &632863856
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3608,6 +3688,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1001 &701290330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3895,6 +3979,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1001 &796515904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4012,6 +4100,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &809821561
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4089,8 +4181,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ba98ae0225fb74d8e45bfe5cdb1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoredDirections: 
+  IgnoredDirections: 02000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &872835314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4255,6 +4351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1003088426
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,6 +4402,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1003088429
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4381,6 +4485,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1021753751
 GameObject:
   m_ObjectHideFlags: 0
@@ -4444,6 +4552,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1032991165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,6 +4603,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 00000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1032991168
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4570,6 +4686,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1135966545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4633,6 +4753,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 02000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1155228910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4680,6 +4804,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 02000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1155228913
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4759,6 +4887,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1233351625
 GameObject:
   m_ObjectHideFlags: 0
@@ -4822,6 +4954,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1248123053
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,6 +5021,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 03000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1265608726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4948,6 +5088,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 02000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1325769387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,6 +5139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1325769390
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5074,6 +5222,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1001 &1400969566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5230,6 +5382,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1418668603
 GameObject:
   m_ObjectHideFlags: 0
@@ -5293,6 +5449,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 02000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1419076884
 GameObject:
   m_ObjectHideFlags: 0
@@ -5356,6 +5516,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1425088683
 GameObject:
   m_ObjectHideFlags: 0
@@ -5419,6 +5583,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1425945740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5466,6 +5634,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 00000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1425945743
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5599,6 +5771,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1445009542
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5678,6 +5854,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1451025571
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,6 +5921,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1458644596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5804,6 +5988,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1463698224
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,6 +6039,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1463698227
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6009,6 +6201,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1546345429
 GameObject:
   m_ObjectHideFlags: 0
@@ -6072,6 +6268,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1551057782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6119,6 +6319,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1551057785
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6350,6 +6554,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1001 &1584033097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6467,6 +6675,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1714279328
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6652,6 +6864,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1791591444
 GameObject:
   m_ObjectHideFlags: 0
@@ -6715,6 +6931,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1800120604
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,6 +6946,7 @@ GameObject:
   - component: {fileID: 1800120605}
   - component: {fileID: 1800120606}
   - component: {fileID: 1800120607}
+  - component: {fileID: 1800120608}
   m_Layer: 0
   m_Name: Walk Nodes
   m_TagString: Untagged
@@ -6832,7 +7053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8dc32733352fe43bca30c20b1951a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeginListeningForNodeClick: 0
 --- !u!114 &1800120607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6849,6 +7069,24 @@ MonoBehaviour:
   nodeLayerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1800120608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800120604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69375aa6066fe8e46b57aec7acb38f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _startingNode: {fileID: 1791591447}
+  _goalNode: {fileID: 1524998271}
+  _nodeManager: {fileID: 1800120607}
 --- !u!1 &1848218272
 GameObject:
   m_ObjectHideFlags: 0
@@ -6912,6 +7150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1850062815
 GameObject:
   m_ObjectHideFlags: 0
@@ -6959,6 +7201,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1850062818
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7022,6 +7268,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1858134938
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7083,8 +7333,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ba98ae0225fb74d8e45bfe5cdb1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IgnoredDirections: 
+  IgnoredDirections: 00000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1935685892
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7164,6 +7418,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1953386424
 GameObject:
   m_ObjectHideFlags: 0
@@ -7227,6 +7485,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &1990990482
 GameObject:
   m_ObjectHideFlags: 0
@@ -7277,7 +7539,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7295,8 +7557,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1056636045
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Positions: []
   m_Parameters:
@@ -7416,6 +7678,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &1994910994
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7495,6 +7761,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &2036160958
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,6 +7828,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1001 &2039347484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7746,6 +8020,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &2069478607
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7809,6 +8087,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &2073318656
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7888,6 +8170,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 01000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &2076913372
 GameObject:
   m_ObjectHideFlags: 0
@@ -7951,6 +8237,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &2094591533
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,6 +8304,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &2138749490
 GameObject:
   m_ObjectHideFlags: 0
@@ -8061,6 +8355,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 00000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!58 &2138749493
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8140,6 +8438,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 02000000
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &2142383052
 GameObject:
   m_ObjectHideFlags: 0
@@ -8203,6 +8505,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IgnoredDirections: 
   NeighboringNodes: []
+  g: 0
+  f: 0
+  h: 0
+  PathParent: {fileID: 0}
 --- !u!1 &2145074412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6862660574320230671, guid: e46d79df8b43cdd489f9c12e82500c01, type: 3}
