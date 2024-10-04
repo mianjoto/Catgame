@@ -3,14 +3,15 @@ using DG.Tweening;
 
 public class CameraFollowObject : MonoBehaviour
 {
-    [SerializeField]
-    private Transform _gameObjectTransform;
+    [SerializeField] private Transform _gameObjectTransform;
+    [SerializeField] private Vector3 _cameraOffset;
     private float _cameraZPosition;
     private float _cameraDampeningSpeed = 2f;
 
     void Start()
     {
         _cameraZPosition = this.transform.position.z;
+        _cameraOffset = Vector3.zero;
     }
 
     void Update()
@@ -23,6 +24,7 @@ public class CameraFollowObject : MonoBehaviour
     {
         Vector3 objectPostition = _gameObjectTransform.position;
         objectPostition = new Vector3(objectPostition.x, objectPostition.y, _cameraZPosition);
+        objectPostition += _cameraOffset;
         return objectPostition;
     }
 
